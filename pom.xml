@@ -35,6 +35,11 @@
             <artifactId>hadoop-mapreduce-client-app</artifactId>
             <version>3.2.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.janeluo</groupId>
+            <artifactId>ikanalyzer</artifactId>
+            <version>2012_u6</version>
+        </dependency>
 
     </dependencies>
 

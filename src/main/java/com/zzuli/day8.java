@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class day8 {
-    class MyMapper extends Mapper<LongWritable, Text,Text, IntWritable> {
+    static class MyMapper extends Mapper<LongWritable, Text,Text, IntWritable> {
         protected void map(LongWritable key,Text value,Context context)throws IOException,InterruptedException{
             String s = value.toString();
             byte[] bytes = s.getBytes();
@@ -31,7 +31,7 @@ public class day8 {
             }
         }
     }
-    class Myreducer extends Reducer<Text,IntWritable,Text,IntWritable>{
+    static class Myreducer extends Reducer<Text,IntWritable,Text,IntWritable>{
         protected void reduce(Text key,Iterable<IntWritable> values,Context context)throws IOException,InterruptedException{
             int count = 0;
             for (IntWritable x:values){

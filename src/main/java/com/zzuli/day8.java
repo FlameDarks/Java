@@ -50,7 +50,7 @@ public class day8 {
             job.setOutputValueClass(IntWritable.class);
             FileInputFormat.setInputPaths(job,"input");
             FileOutputFormat.setOutputPath(job,new Path("out"));
-            job.waitForCompletion(true);
+//            job.waitForCompletion(true);
         } catch (Exception e) {
             e.printStackTrace();
         }
